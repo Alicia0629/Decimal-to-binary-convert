@@ -1,0 +1,27 @@
+def convert(decimal_number):
+ length=0
+ binary_number=""
+ while 2==2:
+  if decimal_number >= 2**length:
+   length+= 1
+  else:
+   break
+ if decimal_number==0:
+  binary_number="0"
+ while length != 0:
+  if decimal_number >= 2**(length-1):
+   decimal_number-=2**(length-1)
+   length-=1
+   binary_number +="1"
+  else:
+   length-=1
+   binary_number+="0"
+ return(binary_number)
+
+while 1==1:
+ try:
+  print(convert(int(input("Enter a decimal number: "))))
+ except ValueError:
+  print("ERROR")
+ finally:
+  print("\n")
